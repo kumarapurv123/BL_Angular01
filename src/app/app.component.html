@@ -3,6 +3,8 @@
 
   <img [src]="logoPath" alt="BridgeLabz Logo" (click)="openBridgeLabz()">
 
-  <input type="text" [(ngModel)]="userName" placeholder="Enter your name">
+
+  <input type="text" [(ngModel)]="userName" placeholder="Enter your name" (input)="validateName()">
+  <div *ngIf="errorMessage" style="color: red;">{{ errorMessage }}</div>
 
 </div>
